@@ -63,42 +63,46 @@ object manzana {
 }
 
 object mijo {
-	var estaMojado = False
+	var estaMojado = false
 	
 	method energiaQueOtorga() {
 		return if (estaMojado) 15 else 20
 	}
 	
 	method mojarse() {
-		estaMojado = True
+		estaMojado = true
 	}
 
 	method secarse() {
-		estaMojado = False
+		estaMojado = false
 	}
 }
 
 object canelones {
-	var joules = 20
+	var tieneSalsa = false
+	var tieneQueso = false
 	
 	method energiaQueOtorga() {
-		return joules	
+	return if(tieneSalsa && tieneQueso) 32
+		else if(tieneSalsa) 25
+			else if(tieneQueso) 27
+				else 20 
 	}
 	
 	method ponerSalsa() {
-		joules += 5
+		tieneSalsa = true
 	}
 	
 	method sacarSalsa() {
-		joules -= 5
+		tieneSalsa = false
 	}
 	
 	method ponerQueso() {
-		joules += 7		
+		tieneQueso = true
 	}
 	
 	method sacarQueso() {
-		joules -= 7
+		tieneQueso = false
 	}
 }
 
