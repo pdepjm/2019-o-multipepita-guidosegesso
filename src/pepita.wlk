@@ -63,7 +63,7 @@ object manzana {
 }
 
 object mijo {
-	var joules = 0
+	var joules = 20
 	
 	method energiaQueOtorga() {
 		return joules	
