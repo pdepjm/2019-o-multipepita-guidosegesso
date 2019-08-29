@@ -63,18 +63,18 @@ object manzana {
 }
 
 object mijo {
-	var joules = 20
+	var estaMojado = False
 	
 	method energiaQueOtorga() {
-		return joules	
+		return if (estaMojado) 15 else 20
 	}
 	
 	method mojarse() {
-		joules = 15
+		estaMojado = True
 	}
 
 	method secarse() {
-		joules = 20
+		estaMojado = False
 	}
 }
 
